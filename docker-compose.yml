@@ -3,3 +3,4 @@ hello:
   command: echo 'ready'
   volumes:
     - .:/home/app/hello
+    - /home/app/hello/node_modules
