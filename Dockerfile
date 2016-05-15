@@ -1,7 +1,7 @@
 FROM node:4.4.4
 
-RUN useradd --user-group --create-home --shell /bin/false app &&\
-  npm install --global npm@3.9.0
+RUN useradd --user-group --create-home --shell /bin/false app && \
+  npm install -g npm@3.9.0 && npm install -g pm2
 
 ENV HOME=/home/app
 
@@ -13,4 +13,4 @@ WORKDIR $HOME/hello
 
 RUN npm install
 
-CMD ["node", "index.js"]
+CMD ["pm2", "start", "process.json", "--no-daemon"]
