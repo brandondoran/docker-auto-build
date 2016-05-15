@@ -1,6 +1,7 @@
 hello:
   build: .
-  command: echo 'ready'
+  ports:
+    - '3000:3000'
   volumes:
     - .:/home/app/hello
     - /home/app/hello/node_modules
