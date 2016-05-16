@@ -1,12 +1,12 @@
 {
   "name": "hello",
   "version": "1.0.1",
-  "description": "",
+  "description": "Example automated Docker build from Github",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Brandon Doran <bdoran@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4"
