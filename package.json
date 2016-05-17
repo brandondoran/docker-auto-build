@@ -1,10 +1,11 @@
 {
-  "name": "hello",
+  "name": "docker-auto-build",
   "version": "1.0.4",
   "description": "Example automated Docker build from Github",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "version:amend": "git commit --amend -m \"Release v${npm_package_version}\"",
+    "postversion": "npm run version:amend && git push origin master --tags"
   },
   "author": "Brandon Doran <bdoran@gmail.com>",
   "license": "MIT",
